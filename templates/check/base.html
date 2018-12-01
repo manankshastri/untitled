@@ -16,14 +16,13 @@
                     {% if user.is_authenticated %}
                     <ul class="sidebar-nav">
                         <li><a href="{% url 'logout' %}">Logout</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="{% url 'profile' %}">About</a></li>
                     </ul>
                     {% else %}
                      <ul class="sidebar-nav">
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'register' %}">Register</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="{% url 'profile' %}">About</a></li>
                     </ul>
                     {% endif %}
                 {% endblock %}

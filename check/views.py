@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -25,3 +26,11 @@ def register(request):
     context = {'form': form}
     return render(request, 'registration/register.html', context)
 
+
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user}
+    return render(request, 'registration/profile.html', args)

@@ -9,4 +9,9 @@ class PatientAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Patient, PatientAdmin)
-admin.site.register(Profile)
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'is_patient', 'is_doctor')
+    fields = ['user', 'is_patient', 'is_doctor']

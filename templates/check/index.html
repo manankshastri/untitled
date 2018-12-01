@@ -9,11 +9,6 @@
 </head>
 <body>
     <h1>Welcome!!</h1>
-    {% if user.is_authenticated %}
-        <h2>Your name is {{ user.username }}</h2>
-    {% else %}
-        <h2></h2>
-    {% endif %}
 </body>
 </html>
 {% endblock %}
