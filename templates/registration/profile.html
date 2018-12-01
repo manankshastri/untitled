@@ -13,7 +13,10 @@
     <p>First name: {{ user.first_name }}</p>
     <p>Last name: {{ user.last_name }}</p>
     <p>Email: {{ user.email }}</p>
-    <p>{{ user.mprofile }}</p>
+    <p>Description : {{ user.mprofile.desc }}</p>
+    <p>City: {{ user.mprofile.city }}</p>
+    <p>Phone: {{ user.mprofile.phone }}</p>
+
 </div>
 
 {% endblock %}
