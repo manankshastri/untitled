@@ -5,5 +5,5 @@ from .models import MProfile
 
 @admin.register(MProfile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'is_patient', 'is_doctor', 'desc', 'city', 'phone')
-    fields = ['user', ('is_patient', 'is_doctor'), ('desc', 'city', 'phone')]
+    list_display = ('user', 'phone')
+    fields = ['user', 'phone']
